@@ -1,15 +1,16 @@
 import { SAppInput } from "./AppInput.style"
 
 type TAppInput  ={
-    inputType:"text" | "tel" | "password",
+    inputType:"text" | "tel" | "password" | "search",
     inputValue?:string,
     inputPlaceholder: string,
     inputChange?:()=>{}
-}
+    inpName?:string
+}& React.InputHTMLAttributes<HTMLInputElement>
 
 
-export const AppInput = ({inputType,inputValue,inputPlaceholder, inputChange}:TAppInput)=>{
+export const AppInput = ({inpName,inputType,inputValue,inputPlaceholder, inputChange,...props}:TAppInput)=>{
     return(
-        <SAppInput type={inputType} placeholder={inputPlaceholder} value={inputValue} onChange={inputChange}/>
+        <SAppInput {...props} name={inpName} type={inputType} placeholder={inputPlaceholder} value={inputValue} onChange={inputChange}/>
     )
 }
