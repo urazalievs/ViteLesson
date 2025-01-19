@@ -1,3 +1,5 @@
+import { SAppInput } from "./AppInput.style"
+
 type TAppInput  ={
     inputType:"text" | "tel" | "password",
     inputValue?:string,
@@ -8,6 +10,6 @@ type TAppInput  ={
 
 export const AppInput = ({inputType,inputValue,inputPlaceholder, inputChange}:TAppInput)=>{
     return(
-        <input type={inputType} placeholder={inputPlaceholder} value={inputValue} onChange={inputChange}/>
+        <SAppInput type={inputType} placeholder={inputPlaceholder} value={inputValue} onChange={inputChange}/>
     )
 }

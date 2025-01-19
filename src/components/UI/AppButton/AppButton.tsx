@@ -1,3 +1,5 @@
+import { SAppbutton } from "./AppButtonStyle"
+
 type TAppButton = {
     buttontext:string,
     buttonType:"button"|"submit",
@@ -13,10 +15,10 @@ export const AppButton = ({
         isDisabled
     }:TAppButton)=>{
     return (
-        <button 
+        <SAppbutton 
             type={buttonType} 
             onClick={buttonClick}
             disabled= {isDisabled}
-            >{buttontext}</button>
+            >{buttontext}</SAppbutton>
     )
 }

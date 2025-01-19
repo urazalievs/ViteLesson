@@ -35,7 +35,6 @@ export const LoginPage = () => {
         hasError= {true}
         regLink="/regist-page"
       />
-      
     </div>
   );
 };
